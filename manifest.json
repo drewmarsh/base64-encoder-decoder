@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Base64 Encoder/Decoder",
+  "version": "1.0",
+  "icons": {
+    "48": "/icons/appicon.svg"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["contextMenus", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "/icons/appicon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

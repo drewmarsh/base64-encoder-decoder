@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder/Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <!-- Toolbar items container --> 
+    <div id="toolbar-items">
+         <!-- Text control buttons -->
+        <div id="text-control-div">
+            <button id="clear"><img src="/icons/unfilled/clear_white_unfilled.svg" style="height: 20px;"></button>
+            <button id="paste"><img src="/icons/unfilled/paste_white_unfilled.svg" style="height: 20px;"></button>
+            <button id="copy"><img src="/icons/unfilled/copy_white_unfilled.svg" style="height: 20px;"></button>
+        </div>
+        
+        <!-- Modifier  -->
+        <div id="modifier-div">
+            <button id="minus"><img src="/icons/minus_white.svg" alt="-" style="height: 20px;"></button>
+            <span id="modifier" class="modifier-number">x<span id="modifier-value">2</span></span>
+            <button id="plus"><img src="/icons/plus_white.svg" alt="+" style="height: 20px;"></button>
+        </div>
+
+        <!-- Theme button -->
+        <div id="theme-div">
+            <button id="theme"><img src="/icons/unfilled/theme_white_unfilled.svg" style="height: 20px;"></button>
+        </div>
+    </div>
+
+    <!-- Text input area -->
+    <div id="text-div">
+        <textarea id="text-input" placeholder="Base64 Encoder/Decoder..."></textarea>
+    </div>
+
+    <!-- Encode/Decode buttons -->
+    <div id="code-buttons-div">
+        <button id="encode-btn"><span>Encode</span></button>
+        <button id="decode-btn"><span>Decode</span></button>
+        <button id="encode-xmod-btn"><span>Encode x</span><span id="modifier-display-encode"></span></button>
+        <button id="decode-xmod-btn"><span>Decode x</span><span id="modifier-display-decode"></span></button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

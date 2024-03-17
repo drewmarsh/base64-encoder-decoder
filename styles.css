@@ -1,0 +1,374 @@
+ /* Remove default button styles */
+ button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: relative; /* Make buttons positioned relatively */
+    z-index: 1; /* Make buttons appear on top of the boxes */
+ }
+ 
+ /* Adjust the size and position of the button icons */
+ button img {
+    width: 19px;
+    height: 19px;
+ }
+ 
+ body {
+    font-family: Roboto, sans-serif;
+    background-color: #201f1f; /* Dark theme background color */
+    min-width: 420px;
+    min-height: 285px;
+    position: relative;
+ }
+ 
+ #modifier-value {
+    user-select: none; /* Prevent text selection on the modifier 'x' symbol */
+ }
+ 
+ .modifier-number {
+    font-family: Roboto, sans-serif;
+    color: white; /* Text color for dark theme */
+    font-weight: bold;
+    user-select: none; /* Prevent text selection on the modifier number */
+}
+ 
+ /* Positioning for the theme button */
+ #theme {
+    position: fixed;
+    right: 6px;
+ }
+ 
+ #toolbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ #text-control-div,
+ #modifier-div,
+ #theme-div {
+    display: flex;
+    align-items: center;
+ }
+ 
+ #text-control-div {
+    flex: 1;
+ }
+ 
+ #theme-div {
+    flex: 1;
+ }
+ 
+ #modifier-div {
+    flex: 1;
+    justify-content: center;
+    margin-left: 51px; /* Center the modifier div, accounting for the extra icons in text-control-div */
+ }
+ 
+ #modifier-div button {
+    margin: 0 7px; /* Add margin to create space between buttons */
+ }
+ 
+ #text-div {
+    margin-top: 10px;
+ }
+ 
+ #text-div,
+ #code-buttons-div,
+ #output-div {
+    margin-top: 10x;
+ }
+ 
+ #text-input,
+ #output-text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 14px;
+    border-style: solid;
+ }
+ 
+ #code-buttons-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px; /* Add space between the text input and button boxes */
+ }
+ 
+ #code-buttons-div button {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 0 8px; /* Add margin to create space between buttons */
+ }
+ 
+ /* Text input styles */
+ #text-input {
+    background-color: #212020; /* Dark theme input background color */
+    color: white; /* Dark theme input text color */
+    resize: none; /* Disable resizing */
+    overflow: auto; /* Enable scrolling */
+    height: 200px; /* Set a fixed height */
+    border-color: white; /* Dark theme input border color */
+ }
+ 
+ #text-input:focus {
+    outline: none;
+ }
+ 
+ #text-control-div button {
+    margin-right: 6px; /* Increase the distance between icons */
+ }
+ 
+ /* Hover styles for vector image buttons (dark theme) */
+ #clear:hover img {
+    content: url("/icons/filled/clear_white_filled.svg");
+ }
+ 
+ #copy:hover img {
+    content: url("/icons/filled/copy_white_filled.svg");
+ }
+ 
+ #theme:hover img {
+    content: url("/icons/filled/theme_white_filled.svg");
+ }
+ 
+ #minus:hover img {
+    content: url("/icons/filled/minus_white_filled.svg");
+ }
+ 
+ #plus:hover img {
+    content: url("/icons/filled/plus_white_filled.svg");
+ }
+ 
+ /* Active styles for vector image buttons (dark theme) */
+ #clear:active img,
+ #copy:active img,
+ #theme:active img,
+ #minus:active img,
+ #plus:active img {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+ }
+ 
+ /* Reset scaling when button is not active (dark theme) */
+ #clear:not(:active) img,
+ #copy:not(:active) img,
+ #theme:not(:active) img,
+ #minus:not(:active) img,
+ #plus:not(:active) img {
+    transform: scale(1);
+    transition: transform 0.1s ease-in-out;
+ }
+ 
+ /* Boxes behind buttons (dark theme) */
+ #encode-btn::before,
+ #decode-btn::before,
+ #encode-xmod-btn::before,
+ #decode-xmod-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #212020; /* Dark gray color */
+    z-index: -1; /* Position the box behind the button */
+    transition: transform 0.1s ease-in-out; /* Add transition for smooth animation */
+    border-radius: 5px; /* Add rounded corners */
+    border: 2px solid white; /* Add white stroke */
+ }
+ 
+ /* Hover styles for boxes (dark theme) */
+ #encode-btn:hover::before,
+ #decode-btn:hover::before,
+ #encode-xmod-btn:hover::before,
+ #decode-xmod-btn:hover::before {
+    background-color: white; /* White background color on hover */
+ }
+ 
+ /* Text color for buttons (dark theme) */
+ #encode-btn span,
+ #decode-btn span,
+ #encode-xmod-btn span,
+ #decode-xmod-btn span,
+ #modifier-display-encode,
+ #modifier-display-decode {
+    color: white;
+ }
+ 
+ /* Text color on hover for buttons (dark theme) */
+ #encode-btn:hover span,
+ #decode-btn:hover span,
+ #encode-xmod-btn:hover span,
+ #decode-xmod-btn:hover span,
+ #encode-xmod-btn:hover #modifier-display-encode,
+ #decode-xmod-btn:hover #modifier-display-decode {
+    color: black;
+ }
+ 
+ /* Box styles on click (dark theme) */
+ #encode-btn:active::before,
+ #decode-btn:active::before,
+ #encode-xmod-btn:active::before,
+ #decode-xmod-btn:active::before {
+    transform: scale(0.92); /* Shrink the box on click */
+ }
+ 
+ /* Hover styles for paste button (dark theme) */
+ #paste:hover img {
+    content: url("/icons/filled/paste_white_filled.svg");
+ }
+ 
+ /* Active styles for paste button (dark theme) */
+ #paste:active img {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+ }
+ 
+ /* Reset scaling when paste button is not active (dark theme) */
+ #paste:not(:active) img {
+    transform: scale(1);
+    transition: transform 0.1s ease-in-out;
+ }
+ 
+ /* Light mode styles */
+ body.light {
+    background-color: white; /* Light theme background color */
+ }
+ 
+ body.light .modifier-number {
+    color: black; /* Light theme text color */
+ }
+ 
+ body.light #minus img {
+    content: url("icons/unfilled/minus_black_unfilled.svg");
+ }
+ 
+ body.light #plus img {
+    content: url("icons/unfilled/plus_black_unfilled.svg");
+ }
+ 
+ body.light #theme img {
+    content: url("/icons/unfilled/theme_black_unfilled.svg");
+ }
+ 
+ body.light #clear img {
+    content: url("/icons/unfilled/clear_black_unfilled.svg");
+ }
+ 
+ body.light #paste img {
+    content: url("/icons/unfilled/paste_black_unfilled.svg");
+ }
+ 
+ body.light #copy img {
+    content: url("/icons/unfilled/copy_black_unfilled.svg");
+ }
+ 
+ body.light #text-input {
+    background-color: #FAFAFA; /* Light theme input background color */
+    color: black; /* Light theme input text color */
+    border-color: black; /* Light theme input border color */
+ }
+ 
+ body.light #encode-btn span,
+ body.light #decode-btn span,
+ body.light #encode-xmod-btn span,
+ body.light #decode-xmod-btn span,
+ body.light #modifier-display-encode,
+ body.light #modifier-display-decode {
+    color: black; /* Light theme button text color */
+ }
+ 
+ /* Light mode hover styles for vector image buttons */
+ body.light #clear:hover img {
+    content: url("/icons/filled/clear_black_filled.svg");
+ }
+ 
+ body.light #copy:hover img {
+    content: url("/icons/filled/copy_black_filled.svg");
+ }
+ 
+ body.light #theme:hover img {
+    content: url("/icons/filled/theme_black_filled.svg");
+ }
+ 
+ body.light #minus:hover img {
+    content: url("/icons/filled/minus_black_filled.svg");
+ }
+ 
+ body.light #plus:hover img {
+    content: url("/icons/filled/plus_black_filled.svg");
+ }
+ 
+ /* Light mode active styles for vector image buttons */
+ body.light #clear:active img,
+ body.light #copy:active img,
+ body.light #theme:active img,
+ body.light #minus:active img,
+ body.light #plus:active img {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+ }
+ 
+ /* Light mode reset scaling when button is not active */
+ body.light #clear:not(:active) img,
+ body.light #copy:not(:active) img,
+ body.light #theme:not(:active) img,
+ body.light #minus:not(:active) img,
+ body.light #plus:not(:active) img {
+    transform: scale(1);
+    transition: transform 0.1s ease-in-out;
+ }
+ 
+ /* Light mode box styles */
+ body.light #encode-btn::before,
+ body.light #decode-btn::before,
+ body.light #encode-xmod-btn::before,
+ body.light #decode-xmod-btn::before {
+    background-color: white; /* Light gray background color */
+    border: 2px solid black; /* Black border */
+ }
+ 
+ /* Light mode hover styles for boxes */
+ body.light #encode-btn:hover::before,
+ body.light #decode-btn:hover::before,
+ body.light #encode-xmod-btn:hover::before,
+ body.light #decode-xmod-btn:hover::before {
+    background-color: black; /* Black background color on hover */
+ }
+ 
+ /* Light mode text color on hover for buttons */
+ body.light #encode-btn:hover span,
+ body.light #decode-btn:hover span,
+ body.light #encode-xmod-btn:hover span,
+ body.light #decode-xmod-btn:hover span,
+ body.light #encode-xmod-btn:hover #modifier-display-encode,
+ body.light #decode-xmod-btn:hover #modifier-display-decode {
+    color: white; /* White text color on hover */
+ }
+ 
+ /* Light mode box styles on click */
+ body.light #encode-btn:active::before,
+ body.light #decode-btn:active::before,
+ body.light #encode-xmod-btn:active::before,
+ body.light #decode-xmod-btn:active::before {
+    transform: scale(0.92); /* Shrink the box on click */
+ }
+ 
+ /* Light mode hover styles for paste button */
+ body.light #paste:hover img {
+    content: url("/icons/filled/paste_black_filled.svg");
+ }
+ 
+ /* Light mode active styles for paste button */
+ body.light #paste:active img {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+ }
+ 
+ /* Light mode reset scaling when paste button is not active */
+ body.light #paste:not(:active) img {
+    transform: scale(1);
+    transition: transform 0.1s ease-in-out;
+ }
