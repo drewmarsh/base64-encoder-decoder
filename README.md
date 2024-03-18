@@ -9,7 +9,7 @@ Additionally, you can encode/decode by a custom modifier value (x2, x3, x4, etc)
 # Preview
 #### Popup GUI:<br>
 ![light_theme_preview](https://github.com/drewmarsh/base64-encoder-decoder/assets/78824781/9c0d8ea8-a934-466b-87df-1e19810c1089)
-&nbsp;&nbsp;&nbsp;
+<br><br>
 ![dark_theme_preview](https://github.com/drewmarsh/base64-encoder-decoder/assets/78824781/e10b345b-dba9-46de-a885-ec5bc8cc14b3)
 
 #### Context menu:<br>
