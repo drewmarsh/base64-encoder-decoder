@@ -1,6 +1,9 @@
 # base64-encoder-decoder
 Web extension with both GUI and context menu tools for encoding/decoding base64 strings. Includes both light and dark themes. Supports encoding/decoding multiple times through a custom modifier (E.g. x2 Decode)
 
+# Download
+[Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/base64-encode-decode/)
+
 # Preview
 #### GUI popup:<br>
 ![light_theme_preview](https://github.com/drewmarsh/base64-encoder-decoder/assets/78824781/9c0d8ea8-a934-466b-87df-1e19810c1089)
