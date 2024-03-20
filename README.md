@@ -1,4 +1,4 @@
-# base64-encoder-decoder
+# Base64 Encoder/Decoder
 This extension offers two ways to encode/decode base64 strings. Get the job done with either an intuitive popup GUI or by selecting any text within your browser and right-clicking it to reveal the available context menu options. 
 
 Additionally, you can encode/decode by a custom modifier value (x2, x3, x4, etc). Also, you can choose between a stylish light or dark theme.
